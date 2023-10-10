@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    float a, b, c; 
+    printf("Input 3 float number:\n");
+    scanf("%f%f%f", &a, &b, &c); 
+    float max, min;
+        
+    if (a <= b && a <= c) {
+        min = a;
+        
+        if (b >= c) max = b;
+        else max = c;
+        
+    } else if (b <= a && b <= c) {
+        min = b;
+        
+        if (a >= c) max = a;
+        else max = c;
+    } 
+    
+    else {
+        min = c;
+        
+        if (a >= b) max = a;
+        else max = b;
+    } 
+    
+    printf("Max: %f  Min: %f \n", max, min);
+    min += 2; 
+    max -= 2;
+    printf("Max-2: %f Min+2: %f", max, min);
+    
+    return 0;
+}
