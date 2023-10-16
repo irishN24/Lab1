@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c; 
+    printf("Input 3 number:\n");
+    scanf("%d%d%d", &a, &b, &c); 
+    if (a == b && b == c){
+        printf("Not found max, min\n");
+    }
+    else if (a == b || b == c || a == c){
+        if (a == b && c > a)
+        c -= 2;
+        if (a == b && c < a)
+        c += 2;
+        
+        if (b == c && a > b)
+        a -= 2;
+        if (b == c && a < b)
+        a += 2;
+        
+        if (a == c && b > a)
+            b -= 2;
+        if (a == c && b < a)
+            b += 2;
+    }
+    else if (a > b && a > c) {   
+        a -= 2;
+        
+        if (b < c) 
+            b += 2;
+        else 
+            c += 2;
+    }
+    else if (b > a && b > c) {
+        b -= 2;
+        
+        if (a < c) 
+            a += 2;
+        else 
+            c += 2;
+    }
+    
+    else {
+        c -= 2;
+        
+        if (a < b) 
+            a += 2;
+        else 
+            b += 2;
+    }
+    
+    printf("%d, %d, %d\n", a, b, c);
+         
+return 0; 
+}
