@@ -8,23 +8,7 @@ int main()
     if (a == b && b == c){
         printf("Not found max, min\n");
     }
-    else if (a == b || b == c || a == c){
-        if (a == b && c > a)
-        c -= 2;
-        if (a == b && c < a)
-        c += 2;
-        
-        if (b == c && a > b)
-        a -= 2;
-        if (b == c && a < b)
-        a += 2;
-        
-        if (a == c && b > a)
-            b -= 2;
-        if (a == c && b < a)
-            b += 2;
-    }
-    else if (a > b && a > c) {   
+    else if (a >= b && a >= c) {   
         a -= 2;
         
         if (b < c) 
@@ -32,7 +16,7 @@ int main()
         else 
             c += 2;
     }
-    else if (b > a && b > c) {
+    else if (b >= a && b >= c) {
         b -= 2;
         
         if (a < c) 
